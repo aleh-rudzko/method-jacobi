@@ -7,7 +7,7 @@ var client = require('../client');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'KURSACHE', data:{} });
+  res.render('index', { title: 'Метод якоби' });
 });
 
 var fs = require('fs');

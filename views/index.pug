@@ -1,10 +1,16 @@
 extends layout
 
 block content
-  form(method="post", enctype="multipart/form-data", action="")
-    input(type="file", name="file", id="id_file", required="true")
-    input(type="submit", value="Загрузить")
-
-  h1!= data
-  h1!= result
-  
+    div(class="container")
+        h1(style="text-align:center;margin-bottom:100px;") Разработка программного обеспечения распределенного решения СЛАУ методом Якоби в ЛВС с использованием стека протоколов Tcp/ip.
+        form(method="post", enctype="multipart/form-data", action="")
+            div(class="form-group")
+                label(for="id_file") Файл с исходными данными
+                input(type="file", name="file", id="id_file", required="true" class="form-control-file")
+            input(type="submit", value="Рассчитать" class="btn btn-primary")
+        if data
+            h2  Исходные данные
+            code!= data
+        if result
+            h2 Результат
+            code!= result
