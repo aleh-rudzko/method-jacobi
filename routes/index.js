@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
         client(data, function(result) {
           console.log('Done parsing form!');
           res.setHeader('Connection', 'close');
-          res.render('index', {title: 'Hey', result, data});
+          res.render('index', {title: 'Метод якоби', result, data});
         })
         
       });
